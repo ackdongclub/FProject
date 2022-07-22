@@ -62,8 +62,8 @@
 					<span id="itemImage" class="col2">상품 사진</span>
 					<span id="itemInfo" class="col2">상품정보</span>
 					<span id="price" class="col2">5000원</span>
-					<span id="qty" class="col2">3개</span>
-					<span id="totalPrice" class="col2">15000원</span>
+					<span id="qty" class="col2">5개</span>
+					<span id="totalPrice" class="col2">25000원</span>
 				</div>
 				<!-- 반복되는 구간 (장바구니 상품)끝 -->
 				<!-- 상단 끝 -->
