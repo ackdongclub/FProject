@@ -1,4 +1,4 @@
-package Pkg.Admin.Controller;
+package Pkg.Admin.CartController;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Cart2Controller {
 	
 	@RequestMapping("cart")
-	public String goCart2() {
-		return "/Admin/Cart2";
+	public String goCart() {
+		return "/Admin/Cart";
 		
 	}
 

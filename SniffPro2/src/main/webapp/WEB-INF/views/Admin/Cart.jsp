@@ -52,7 +52,13 @@
 	.col1{
 		display:flex;
 		width:150px;
-		border:solid 0px red;=
+		border:solid 0px red;
+		align-items: center;
+	}
+	.col12{
+		display:flex;
+		width:50px;
+		border:solid 0px red;
 		align-items: center;
 	}
 	.col2{
@@ -76,7 +82,8 @@
 			<!-- 상단 시작 -->
 			<div id="boxwrap">
 				<div class="box3">
-					<span class="col21"><input type="checkbox" id="AllChk" name="AllChk"/></span>
+					<span class="col12"><input type="checkbox" id="AllChk" name="AllChk"/></span>
+					<span id="itemNum" class="col12">NO</span>
 					<span id="itemImage" class="col1"></span>
 					<span id="itemInfo" class="col1">상품정보</span>
 					<span id="price" class="col1">상품금액</span>
@@ -84,14 +91,17 @@
 					<span id="totalPrice" class="col1">총금액</span>
 				</div>
 				<!-- 반복되는 구간 (장바구니 상품)시작 -->
+
 				<div class="box3">
-					<span class="col21"><input type="checkbox" id="chk" name="chk"/></span>
+					<span class="col12"><input type="checkbox" id="chk" name="chk"/></span>
+					<span id="itemNum" class="col12">1</span>
 					<span id="itemImage" class="col2">상품 사진</span>
 					<span id="itemInfo" class="col2">상품정보</span>
 					<span id="price" class="col2">5000원</span>
 					<span id="qty" class="col2">5개</span>
 					<span id="totalPrice" class="col2">25000원</span>
 				</div>
+
 				<!-- 반복되는 구간 (장바구니 상품)끝 -->
 			<!-- 상단 끝 -->
 			</div>
