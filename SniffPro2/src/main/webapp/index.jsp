@@ -17,8 +17,9 @@
 	#allBox{
 		display:flex;
 		border:solid 1px black;
-		width:600px;
+		width:800px;
 		height:500px;
+		
 		padding:50px 10px 10px 10px;
 	}
 	#cart{
@@ -26,48 +27,19 @@
 		color:white;
 		width:150px;
 		height:40px;
+		
 		align-items:center;
 		justify-content:center;
 		text-decoration-line:none;
 		background-color:gray;
 	}
-	
-	#box1{
-		display:flex;
-		border:solid 1px black;
-		width:600px;
-		height:400px;
-		padding:50px;
-		margin-left:19%;
-	}
-	
-	.box3{
-		display:flex;
-		border-bottom:solid 1px black;
-		border-top:solid 1px black;
-		width: 550px;
-		padding:0px 20px;
-	}
-	
-	.col1{
-		display:flex;
-		width:150px;
-		border:solid 0px red;
-		align-items: center;
-	}
-	.col2{
-		display:flex;
-		width:150px;
-		border:solid 0px red;
-		height:30px;
-		align-items:center;
-	}
+
 </style>
 <body>
 	<div id="wrap">
 		<div id="sideMenu">
 			<span id="cartBtn">
-				<a id="cart" href="cart">장바구니</a>
+				<a id="cart" href="goCart">장바구니</a>
 				
 			</span>
 		</div>

@@ -1,14 +1,15 @@
 package Pkg.Admin.CartsDTO;
 
-public class CartDTO {
-	
-	private String cIdx;
-	private String usignId;
+public class CartListDTO {
+
 	private String pId;
 	private int cQty;
 	private int sPrice;
 	private String pName;
-	private String iId;
+	private String saveName;
+	private String usignId;
+	private String cIdx;
+	
 	
 	public String getcIdx() {
 		return cIdx;
@@ -16,11 +17,11 @@ public class CartDTO {
 	public void setcIdx(String cIdx) {
 		this.cIdx = cIdx;
 	}
-	public String getUsignId() {
-		return usignId;
+	public String getSaveName() {
+		return saveName;
 	}
-	public void setUsignId(String usignId) {
-		this.usignId = usignId;
+	public void setSaveName(String saveName) {
+		this.saveName = saveName;
 	}
 	public String getpId() {
 		return pId;
@@ -46,12 +47,11 @@ public class CartDTO {
 	public void setpName(String pName) {
 		this.pName = pName;
 	}
-	public String getiId() {
-		return iId;
+	public String getUsignId() {
+		return usignId;
 	}
-	public void setiId(String iId) {
-		this.iId = iId;
+	public void setUsignId(String usignId) {
+		this.usignId = usignId;
 	}
-	
 
 }

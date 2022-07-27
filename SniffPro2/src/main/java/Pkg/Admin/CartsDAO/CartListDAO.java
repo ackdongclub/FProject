@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import Pkg.Admin.CartsDTO.CartDTO;
+import Pkg.Admin.CartsDTO.CartListDTO;
 
-public interface CartDAO {
+public interface CartListDAO {
 	
-	public List<CartDTO> getCartList(String cIdx);
+	List<CartListDTO> getCartList(String usingId, String cIdx);//목록
 	
-	public Map<String, ArrayList<String>> delCartList();
+	public void delCartList(Map<String, String[]> map);
 
 }

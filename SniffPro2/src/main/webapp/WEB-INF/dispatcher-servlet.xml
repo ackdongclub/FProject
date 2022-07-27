@@ -17,12 +17,30 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
+	<!-- <bean id="/helloSpring" class="Pkg.Boards.Controller.BoardController"/> -->
+	<context:component-scan base-package="Pkg.Admin.*"></context:component-scan>
+	<mvc:annotation-driven />
+	<mvc:resources location="/WEB-INF/resources/" mapping="/jscss/**"></mvc:resources>
+	<!-- <mvc:resources location="/WEB-INF/resources/" mapping="/jscss/**"></mvc:resources> -->
+	
+	
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
 	     <property value="oracle.jdbc.driver.OracleDriver" name="driverClassName" />
 	     <property value="jdbc:oracle:thin:@db202204141134_high?TNS_ADMIN=/Users/seonmian/DB/Wallet_DB202204141134" name="url" />
 	     <property value="PARK6" name="username" />
 	     <property value="Vmfhejrxm123" name="password" />
     </bean>
+    
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="SqlSessionFactory">
+	  <property name="dataSource" ref="dataSource" />
+	  <!-- <property value="classpath:mybatis-config.xml" name="configLocation" /> -->
+	  <property value="classpath:/mapper/**/*.xml" name="mapperLocations" />
+	</bean>
+
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+       <constructor-arg name="sqlSessionFactory" ref="SqlSessionFactory"></constructor-arg>    
+    </bean>
+
     
     
 

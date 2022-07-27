@@ -37,12 +37,11 @@
     
     <error-page>
     	<error-code>404</error-code>
-		<location>/errorHandle?errorCode=404</location> <!-- 페이지 없음 -->
+		<location>/errorHandle?errorCode=404</location>
     </error-page>
-    
-    <error-page>
+     <error-page>
     	<error-code>500</error-code>
-		<location>/errorHandle?errorCode=500</location> 
+		<location>/errorHandle?errorCode=500</location>
     </error-page>
   
   
