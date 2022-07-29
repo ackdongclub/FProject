@@ -19,7 +19,6 @@
 		border:solid 1px black;
 		width:800px;
 		height:500px;
-		
 		padding:50px 10px 10px 10px;
 	}
 	#cart{

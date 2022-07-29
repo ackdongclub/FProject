@@ -1,5 +1,6 @@
 package Pkg.Admin.CartsDAO;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,10 +31,29 @@ public class CartListDAOImpl implements CartListDAO{
 		return cartList;
 	}
 
+
 	@Override
-	public void delCartList(Map<String, String[]> map) {
-		// TODO Auto-generated method stub
+	public Map<String, ArrayList<String>> delCartList(String[] cIdx) {
 		
+		Map<String, ArrayList<String>> errMap = new HashMap<String, ArrayList<String>>();
+		
+		ArrayList<String> arrErrCode = new ArrayList<String>();
+		ArrayList<String> arrErrMsg = new ArrayList<String>();
+		
+		for(int i = 0; i < cIdx.length; i++) {
+			Map<String, Object> map = new HashMap<String, Object>();
+			map.put("cIdx", cIdx[i]);
+			
+			sqlSession.selectList("delCartList", map);
+			
+			arrErrCode.add((String)map.get("errCode"));
+			arrErrMsg.add((String)map.get("errMsg"));
+		}
+		
+		errMap.put("errCode", arrErrCode);
+		errMap.put("errMsg", arrErrMsg);
+		
+		return errMap;
 	}
 
 }

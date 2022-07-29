@@ -1,9 +1,10 @@
 package Pkg.Admin.CartsService;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,10 +24,11 @@ public class CartServiceImpl implements CartService{
 	}
 
 	@Override
-	public void delCartList(Map<String, String[]> map) {
+	public Map<String, ArrayList<String>> delCartList(String[] cIdx) {
 		
-		cartDAO.delCartList(map);
-		
+		return cartDAO.delCartList(cIdx);
 	}
+
+	
 
 }

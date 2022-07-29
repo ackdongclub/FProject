@@ -10,6 +10,6 @@ public interface CartListDAO {
 	
 	List<CartListDTO> getCartList(String usingId, String cIdx);//목록
 	
-	public void delCartList(Map<String, String[]> map);
+	Map<String, ArrayList<String>>delCartList(String[] cIdx);
 
 }

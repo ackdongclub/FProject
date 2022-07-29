@@ -99,8 +99,6 @@
 </head>
 
 <script>
-
-	$()
 	
 	$(document).ready(
 		function() {
@@ -113,9 +111,14 @@
 						$("input[name='chk']").prop("checked", false);
 					}
 				}		
-				);
+			);
+			
 		}		
 	);
+	
+	var delBtn = function(data) {
+		alert(data);
+	}
 
 </script>
 
@@ -148,6 +151,8 @@
 				<!-- 반복되는 구간 (장바구니 상품)시작-->
 			<%
 			int i = 1;
+			int total = 0;
+			int j;
 			for(CartListDTO dto : cartList) { %>
 					<div class="row">
 						<span class="col12"><input type="checkbox" name="chk"/></span>
@@ -156,23 +161,28 @@
 						<span id="itemInfo" class="col2"><%=dto.getpName() %></span>
 						<span id="price" class="col2"><%=dto.getsPrice() %></span>
 						<span id="qty" class="col2"><%=dto.getcQty() %></span>
-						<span id="totalPrice" class="col2" style="font-size:15px;"><%=dto.getsPrice() * dto.getcQty() %></span>
+						<span id="totalPrice" class="col2" style="font-size:15px;"><%=j = dto.getsPrice() * dto.getcQty()%></span>
 					</div>
 			<%
 				i += 1;
-			} %>
+				total = total + j;
+			} 
+			%>
 				<!-- 반복되는 구간 (장바구니 상품)끝 -->
 			<!-- 상단 끝 -->
 			
 			<!-- 총금액 -->
+			
 			<div class="tPrice">
-				<div id="totle"
+				<div id="total">총금액:<%=total %></div>
 			</div>
 			
+			
+			
 			<!-- delete button 시작-->
-			<div class="delButton">
-				<div id="delForm"><input type="button" id="delBtn" name="delBtn" value="삭제"/></div>
-			</div>
+				<div>
+					<input type="button" id="delBtn" name="delBtn" value="삭제" onclick="delBtn()"/>
+				</div>
 			<!-- delete button 끝-->
 			
 			</div>
