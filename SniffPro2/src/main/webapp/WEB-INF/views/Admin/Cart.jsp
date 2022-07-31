@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.List, Pkg.Admin.CartsDTO.CartListDTO, Pkg.Admin.CartsService.CartServiceImpl" %>
+<%@ page import="java.util.ArrayList" %>
 
 <!DOCTYPE html>
 <html>
@@ -116,10 +117,15 @@
 		}		
 	);
 	
-	var delBtn = function(data) {
-		alert(data);
+	var delList = function() {
+		$("input[name='chk']").each(
+			function(index) {
+				if(confirm($(this).prop("checked") == true)) {
+					location.href="delCartlist?cIdx=" + cIdx;
+				}
+			}
+		);
 	}
-
 </script>
 
 <body>
@@ -181,7 +187,7 @@
 			
 			<!-- delete button 시작-->
 				<div>
-					<input type="button" id="delBtn" name="delBtn" value="삭제" onclick="delBtn()"/>
+					<input type="button" id="delBtn" name="delBtn" value="삭제" onclick="delList()"/>
 				</div>
 			<!-- delete button 끝-->
 			

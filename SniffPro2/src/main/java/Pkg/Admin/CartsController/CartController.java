@@ -53,7 +53,7 @@ public class CartController {
 		
 		//error처리
 		
-		return "redirect:goCart?pId=";
+		return "redirect:goCart?cIdx=";
 	}
 	
 

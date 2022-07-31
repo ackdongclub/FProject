@@ -26,7 +26,7 @@
 
 	<select id = "delCartList" parameterType = "Pkg.Admin.CartsDTO.CartListDTO" statementType = "CALLABLE">
 		{
-			call PKG_CART.PROC_DEL_CART(
+			call PROC_DEL_CART.PROC_DEL_CART(
 				#{cIdx, jdbcType = VARCHAR, mode = IN},
 				#{errCode, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String},
 				#{errMsg, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
